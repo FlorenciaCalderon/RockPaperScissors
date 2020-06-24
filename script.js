@@ -8,42 +8,25 @@ function computerPlay() {
 let playerScore=0;
 let computerScore=0;
 
+const content1 = document.createElement('div');
+const content2 = document.createElement('div');
+const content3 = document.createElement('div');
+
+
 function playRound(playerSelection, computerSelection) {
 if (playerSelection=="Rock"&&computerSelection=="Scissors"||playerSelection=="Paper"&&computerSelection=="Rock"||playerSelection=="Scissors"&&computerSelection=="Paper"){
-   playerScore++;
-
-   if(playerScore==5){
-    const content = document.createElement('div');
-    content.textContent = "WINNER! "+playerSelection+" vs "+computerSelection+", Your Score is "+playerScore+"/5, PLAYER WINS!";
-    container.appendChild(content);
-    playerScore=0;
-    computerScore=0;
-  }else{
-    const content = document.createElement('div');
-    content.textContent = "WINNER! "+playerSelection+" vs "+computerSelection+", Your Score is "+playerScore+"/5";
-    container.appendChild(content);
-  }
+   playerScore++; 
 }
 else if (computerSelection=="Rock"&&playerSelection=="Scissors"||computerSelection=="Paper"&&playerSelection=="Rock"||computerSelection=="Scissors"&&playerSelection=="Paper"){
    computerScore++;
 
-  if(computerScore==5){
-   const content = document.createElement('div');
-   content.textContent = "LOSER! "+playerSelection+" vs "+computerSelection+", Computer Score is "+computerScore+"/5, COMPUTER WINS!";
-   container.appendChild(content);
-   playerScore=0;
-   computerScore=0;
-  }else{
-   const content = document.createElement('div');
-   content.textContent = "LOSER! "+playerSelection+" vs "+computerSelection+", Computer Score is "+computerScore+"/5";
-   container.appendChild(content);
-  }
-  }
-else if (playerSelection==computerSelection){
-   const content = document.createElement('div');
-   content.textContent = "EVEN! "+playerSelection+" = "+computerSelection;
-   container.appendChild(content);
-   }
+}
+ 
+
+content1.textContent = "Player: "+playerScore;
+content2.textContent=playerSelection+"    vs    "+computerSelection;
+content3.textContent = "Computer: "+computerScore;
+  
 }
 
 
@@ -59,6 +42,9 @@ playRound("Scissors",computerPlay());
 
 
 const container = document.querySelector('#container');
+container.appendChild(content1);
+container.appendChild(content2);
+container.appendChild(content3);
 
 
 

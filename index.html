@@ -8,33 +8,49 @@
     <style>
 h1{
 text-align:center;
+font-family: "Lucida Console", Courier, monospace;
 }
 button{
+font-family: "Lucida Console", Courier, monospace;
 display: inline block;
 text-align:center;
 width:100px;
 background-color:#33ffad;
 border: 2px solid;
-padding:2px;
+padding:5px;
 }
 
-#Rock{
-  margin-left:38%;
-}
+#container{
+  display:grid;
+  grid-template-columns:auto auto auto;
+  justify-content: center;
+  text-align:center;
+  grid-gap:30px;
+  }
 
 div{
-  text-align:center;
+font-family: "Lucida Console", Courier, monospace;
+}
+
+#container1{
+ display:grid;
+ grid-template-columns:auto auto auto;
+justify-content: center;
+  grid-gap:10px;
 }
 
     </style>
 </head>
 <body>
-    <h1>Play Round</h1>
-    <button id="Rock">ROCK</button>
-    <button id="Paper">PAPER</button>
-    <button id="Scissors">SCISSORS</button><br><br>
+  <h1>Play Round</h1><br><br>
 
-    <div id="container"></div>
+  <div id="container"></div><br><br>
+ 
+ <div id="container1">
+  <button id="Rock">ROCK</button>
+  <button id="Paper">PAPER</button>
+  <button id="Scissors">SCISSORS</button>
+ </div>
 
     <script src="script.js"></script>
     
