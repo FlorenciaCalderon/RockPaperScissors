@@ -14,13 +14,13 @@ if (playerSelection=="Rock"&&computerSelection=="Scissors"||playerSelection=="Pa
 
    if(playerScore==5){
     const content = document.createElement('div');
-    content.textContent = "You WIN!!! "+playerSelection+" beats "+computerSelection+", Your Score is "+playerScore+"/5, YOU ARE THE WINNER!";
+    content.textContent = "WINNER! "+playerSelection+" vs "+computerSelection+", Your Score is "+playerScore+"/5, PLAYER WINS!";
     container.appendChild(content);
     playerScore=0;
     computerScore=0;
   }else{
     const content = document.createElement('div');
-    content.textContent = "You WIN!!! "+playerSelection+" beats "+computerSelection+", Your Score is "+playerScore+"/5";
+    content.textContent = "WINNER! "+playerSelection+" vs "+computerSelection+", Your Score is "+playerScore+"/5";
     container.appendChild(content);
   }
 }
@@ -29,19 +29,19 @@ else if (computerSelection=="Rock"&&playerSelection=="Scissors"||computerSelecti
 
   if(computerScore==5){
    const content = document.createElement('div');
-   content.textContent = "You Lose :( "+computerSelection+" beats "+playerSelection+", Computer Score is "+computerScore+"/5, COMPUTER IS THE WINNER!";
+   content.textContent = "LOSER! "+playerSelection+" vs "+computerSelection+", Computer Score is "+computerScore+"/5, COMPUTER WINS!";
    container.appendChild(content);
    playerScore=0;
    computerScore=0;
   }else{
    const content = document.createElement('div');
-   content.textContent = "You Lose :( "+computerSelection+" beats "+playerSelection+", Computer Score is "+computerScore+"/5";
+   content.textContent = "LOSER! "+playerSelection+" vs "+computerSelection+", Computer Score is "+computerScore+"/5";
    container.appendChild(content);
   }
   }
 else if (playerSelection==computerSelection){
    const content = document.createElement('div');
-   content.textContent = "You are EVEN! "+playerSelection+" = "+computerSelection;
+   content.textContent = "EVEN! "+playerSelection+" = "+computerSelection;
    container.appendChild(content);
    }
 }
